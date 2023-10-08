@@ -1,7 +1,7 @@
 
 import { Button } from '../../components/Button';
-import './styles'
 import { HomeContainer } from './styles'
+import './styles'
 
 
 const Home = () => {
@@ -11,6 +11,7 @@ const Home = () => {
 
       <h1>My home page</h1>
       <Button />
+      
     </HomeContainer>
   );
 }

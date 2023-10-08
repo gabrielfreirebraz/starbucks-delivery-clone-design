@@ -1,32 +1,38 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import logo from './../../assets/images/starbucks-logo.svg';
+import iconLocale from './../../assets/images/icon-map.svg';
+import imgHistoria from './../../assets/images/sb-historias-logo.svg'
+import { HeaderContainer } from './styles';
 
 export const Header = () => {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <HeaderContainer>
+      <Navbar expand="lg" className="bg-body-tertiary">
+        <Container>
+          <Navbar.Brand href="#home">
+            <img src={logo} height={50} />
+
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="/home">Menu</Nav.Link>
+              <Nav.Link href="#k">Rewards</Nav.Link>
+              <Nav.Link href="#">Nosso café</Nav.Link>
+              <Nav.Link href="#">Impacto social</Nav.Link>
+              
+            </Nav>
+
+            <div id='navRight'>
+              <img src={imgHistoria} className='imgHistoria' />
+              <img src={iconLocale} className='iconLocale' />
+              <a href="#">Encontre uma loja</a>
+            </div>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </HeaderContainer>
   );
 }
