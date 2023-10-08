@@ -33,8 +33,8 @@ export const Header = () => {
                 <img src={iconCart} className='iconCart' />
                 <a href="#">Meus cafés</a>
 
-                <ButtonContainer>Entrar</ButtonContainer>
-                <ButtonContainer variant='secondary' outline>Cadastre-se</ButtonContainer>
+                <ButtonContainer classVariant='primary'>Entrar</ButtonContainer>
+                <ButtonContainer classVariant='secondary' outline>Cadastre-se</ButtonContainer>
             </div>
           </Navbar.Collapse>
           

@@ -2,15 +2,16 @@ import { ButtonContainer } from "./styles";
 
 
 interface ButtonProps {
-  variant?: string
+  classVariant?: string,
+  outline?: boolean;
 }
 
 
-export const Button = ({ variant = 'primary' }: ButtonProps) => {
+export const Button = ({ classVariant = 'primary', outline = false }: ButtonProps) => {
 
   return (
 
-    <ButtonContainer className="btn" variant={variant}>
+    <ButtonContainer className="btn" classVariant={classVariant} outline={outline} >
       My button
     </ButtonContainer>
   );

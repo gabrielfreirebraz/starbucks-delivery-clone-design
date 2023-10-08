@@ -17,6 +17,10 @@ export const HeaderContainer = styled.div`
       font-weight: 800;
       letter-spacing: 0.1rem;
       text-transform: uppercase;
+
+      &:hover {
+        color: ${(props) => props.theme.primary};
+      }
     }
     .imgHistoria {
       width: 8rem;
