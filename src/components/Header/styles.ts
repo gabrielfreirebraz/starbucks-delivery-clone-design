@@ -8,7 +8,7 @@ export const HeaderContainer = styled.div`
   }
   .container {
     padding: 0.7rem 0.1rem;
-    margin: 0 2.2rem;
+    /* margin: 0 2.2rem; */
 
     a.nav-link {
       padding-left: 1.5rem;
@@ -21,7 +21,7 @@ export const HeaderContainer = styled.div`
     .imgHistoria {
       width: 8rem;
     }
-    .iconLocale {
+    .iconCart {
       width: 1.5rem;
       margin-left: 2rem;
       margin-right: 0.5rem;
@@ -29,7 +29,6 @@ export const HeaderContainer = styled.div`
   }
   #navRight {
     /* border: solid 1px #000; */
-    width: 25rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,5 +38,10 @@ export const HeaderContainer = styled.div`
     font-weight: 700;
     color: #000;
     text-decoration: none;
+    margin-right: 2rem;
+
+    &::after {
+      border: 0;
+    }
   }
 `;
