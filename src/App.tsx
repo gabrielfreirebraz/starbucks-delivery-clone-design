@@ -1,13 +1,9 @@
-import { Button } from "react-bootstrap"
-import { Home } from "./pages/Home"
+import { Router } from "./Router"
 
 function App() {
 
-  return (
-    <>
-      <Home />
-      <Button className="btn btn-primary">Meu botao</Button>
-    </>
+  return (    
+    <Router />
   )
 }
 
