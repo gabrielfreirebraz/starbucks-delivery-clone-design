@@ -4,6 +4,7 @@ export const HeaderContainer = styled.div`
   * {
   }
   .navbar {
+    box-shadow: 0 0 3px 0 #999;
   }
   .container {
     padding: 0.7rem 0.1rem;
@@ -24,7 +25,6 @@ export const HeaderContainer = styled.div`
       width: 1.5rem;
       margin-left: 2rem;
       margin-right: 0.5rem;
-      /* color: black; */
     }
   }
   #navRight {
