@@ -1,12 +1,15 @@
 
-// import { Button } from '../../components/Button';
 import { HomeContainer } from './styles';
+import { Carousel, Col, Row, Card } from 'react-bootstrap';
+import { ButtonContainer } from '../../components/Button/styles';
+
 import imgBanner1 from './../../assets/images/banner/banner_1121600051_desktop.jpg'
 import imgBanner2 from './../../assets/images/banner/banner_195590685_desktop.jpg'
 import imgBanner3 from './../../assets/images/banner/banner_3676615800_desktop.jpg'
 import iconNext from './../../assets/images/chevron-right.svg';
 import iconPrev from './../../assets/images/chevron-left.svg';
-import { Carousel, Col, Row } from 'react-bootstrap';
+import coffe1 from './../../assets/images/shop/coffe1.jpeg';
+
 import './styles'
 
 
@@ -20,6 +23,12 @@ const Home = () => {
           <Banner />
         </Col>
         <Col></Col>
+      </Row>
+
+      <Row>
+        <Col>
+          <Shop/>
+        </Col>
       </Row>
       
     </HomeContainer>
@@ -54,6 +63,25 @@ const Banner = () => {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+  );
+}
+
+const Shop = () => {
+
+  return (
+    <>
+      <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={coffe1} />
+      <Card.Body>
+        <Card.Title>Apple Crisp frappucino</Card.Title>
+        <Card.Text>
+          Bebida batida com gelo, com ou sem café, xarope de maça com açucar mascavo, finalizado com chantilly de baunilha e uma deliciosa calda de maça caramelizada com especiarias.
+        </Card.Text>
+        <ButtonContainer variant={"default"}>Go somewhere</ButtonContainer>
+      </Card.Body>
+    </Card>
+    </>
+
   );
 }
 
