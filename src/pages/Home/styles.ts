@@ -95,6 +95,27 @@ const HomeContainer = styled.div`
       margin: 0 0.1rem;
     }
   }
+
+  .btn-group-qtd {
+    margin: 0.2rem 0 1rem;
+  }
+  input.txt-qtd {
+    width: 50px;
+    text-align: center;
+    outline: ${(props) => props.theme.default};
+    border: solid 1px ${(props) => props.theme.default};
+    border-radius: 15px;
+    padding: 0.3rem 0.5rem;
+    color: ${(props) => props.theme.default};
+    font-weight: 700;
+    margin: 0 0.5rem;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
 `;
 
 export { HomeContainer };

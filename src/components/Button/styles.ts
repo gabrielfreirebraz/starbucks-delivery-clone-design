@@ -57,3 +57,10 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   border: solid 1px
     ${(props) => props.variant !== "default" && props.theme.black};
 `;
+
+export const ButtonQtdContainer = styled.button`
+  background: transparent;
+  color: ${(props) => props.theme.default};
+  border: 0;
+  margin-top: 0.4rem;
+`;

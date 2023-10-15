@@ -1,7 +1,7 @@
 
 import { HomeContainer } from './styles';
-import { Carousel, Col, Row, Card } from 'react-bootstrap';
-import { ButtonContainer } from '../../components/Button/styles';
+import { Carousel, Col, Row, Card, ButtonGroup } from 'react-bootstrap';
+import { ButtonContainer, ButtonQtdContainer } from '../../components/Button/styles';
 
 import imgBanner1 from './../../assets/images/banner/banner_1121600051_desktop.jpg'
 import imgBanner2 from './../../assets/images/banner/banner_195590685_desktop.jpg'
@@ -126,8 +126,26 @@ const Shop = () => {
                 Bebida batida com gelo, com ou sem café, xarope de maça com açucar mascavo, finalizado com chantilly de baunilha e uma deliciosa calda de maça caramelizada com especiarias.
 
 
-                <br/>
+                <br/><br/>
                 <h5 className='preco-item'><span>R$</span> 21,00</h5>
+
+                <br/>
+                <ButtonGroup className='btn-group-qtd'>
+                  <ButtonQtdContainer>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-dash-lg" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/>
+                    </svg>
+                  </ButtonQtdContainer>
+
+                  <input type='number' min={0} max={6} className='txt-qtd' defaultValue={0}></input>
+
+                  <ButtonQtdContainer>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-plus-lg" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+                    </svg>
+                  </ButtonQtdContainer>
+                </ButtonGroup>
+                
 
               </Card.Text>
 
