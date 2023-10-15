@@ -3,8 +3,8 @@ import styled, { css } from "styled-components";
 export type ButtonVariant = "primary" | "secondary" | string;
 
 interface ButtonContainerProps {
-  classVariant?: ButtonVariant;
-  outline?: boolean;
+  variant?: ButtonVariant;
+  outline?: boolean | string;
 }
 
 export const ButtonContainer = styled.button<ButtonContainerProps>`
@@ -25,17 +25,15 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
 
   /* ${(props) => {
     return css`
-      background: ${props.classVariant === "primary" && props.theme.primary};
+      background: ${props.variant === "primary" && props.theme.primary};
     `;
   }}; */
 
+  background: ${(props) => props.variant === "primary" && props.theme.black};
+  background: ${(props) => props.variant === "secondary" && props.theme.black};
   background: ${(props) =>
-    props.classVariant === "primary" && props.theme.black};
-  background: ${(props) =>
-    props.classVariant === "secondary" && props.theme.black};
-  background: ${(props) =>
-    props.classVariant === "secondary" && props.outline && props.theme.white};
+    props.variant === "secondary" && !!props.outline && props.theme.white};
   color: ${(props) =>
-    props.classVariant === "secondary" && props.outline && props.theme.black};
+    props.variant === "secondary" && !!props.outline && props.theme.black};
   border: solid 1px ${(props) => props.theme.black};
 `;
