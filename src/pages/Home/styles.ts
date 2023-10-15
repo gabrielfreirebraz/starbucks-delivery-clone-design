@@ -4,7 +4,7 @@ const HomeContainer = styled.div`
   background: transparent;
 
   .carousel {
-    margin-bottom: 6rem;
+    margin-bottom: 1rem;
     a.carousel-control-next img,
     a.carousel-control-prev img {
       width: 3.5rem !important;
@@ -18,6 +18,23 @@ const HomeContainer = styled.div`
       border-radius: 25px;
       padding: 1.5rem;
     } */
+  }
+
+  #title-shop {
+    background-color: ${(props) => props.theme.green};
+    text-align: center;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  #title-shop h5 {
+    color: ${(props) => props.theme.darkGreen};
+    font-weight: 400;
+  }
+  #title-shop h5:last-child {
+    font-weight: 700 !important;
   }
 
   .card {

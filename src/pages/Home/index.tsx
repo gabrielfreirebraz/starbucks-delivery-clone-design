@@ -31,17 +31,19 @@ const Home = () => {
   return(
     <HomeContainer>
       <Row>
-        <Col></Col>
-        <Col>
+        <Col />
+        <Col md={9}>
           <Banner />
         </Col>
-        <Col></Col>
+        <Col />
       </Row>
 
       <Row>
-        <Col>
+        <Col /> 
+        <Col md={9}>
           <Shop/>
         </Col>
+        <Col />
       </Row>
       
     </HomeContainer>
@@ -51,31 +53,35 @@ const Home = () => {
 
 const Banner = () => {
   return (
-    <Carousel nextIcon={<img src={iconNext} />} prevIcon={<img src={iconPrev} />}>
-      <Carousel.Item>
-        <img src={imgBanner1} alt="Slide 1" />
-        <Carousel.Caption>
-          {/* <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img src={imgBanner2} alt="Slide 2" />
-        <Carousel.Caption>
-          {/* <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img src={imgBanner3} alt="Slide 3" />
-        <Carousel.Caption>
-          {/* <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p> */}
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+    <Row>
+      <Col md={12}>
+        <Carousel nextIcon={<img src={iconNext} />} prevIcon={<img src={iconPrev} />}>
+          <Carousel.Item>
+            <img src={imgBanner1} alt="Slide 1" />
+            <Carousel.Caption>
+              {/* <h3>First slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img src={imgBanner2} alt="Slide 2" />
+            <Carousel.Caption>
+              {/* <h3>Second slide label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img src={imgBanner3} alt="Slide 3" />
+            <Carousel.Caption>
+              {/* <h3>Third slide label</h3>
+              <p>
+                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+              </p> */}
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
+      </Col>
+    </Row>
   );
 }
 
@@ -83,13 +89,28 @@ const Shop = () => {
 
   return (
     <>
+      {/* // ---------------------- TITLE SHOP */}
+
+      <Row>
+        <Col md={12}>
+          <div id="title-shop">
+            <h5>
+              “A cada xícara, a cada conversa, com cada comunidade – Nós nutrimos infinitas possibilidades de conexão humana.”
+            </h5>
+            <h5>
+              Receba seu cafézinho em casa usando seu rewards
+            </h5>
+          </div>
+        </Col>
+      </Row>
+
+    
       {/* // ---------------------- LINE 1 */}
 
       <Row>
-        <Col></Col>
         
         <Col>
-          <Card style={{ width: '18rem' }}>
+          <Card>
             <Card.Img variant="top" src={coffee1} />
             <Card.Body>
               <Card.Title>Apple Crisp frappuccino</Card.Title>
@@ -107,7 +128,7 @@ const Shop = () => {
         </Col>
 
         <Col>
-          <Card style={{ width: '18rem' }}>
+          <Card>
             <Card.Img variant="top" src={coffee2} />
             <Card.Body>
               <Card.Title>Apple Crisp frappuccino</Card.Title>
@@ -124,7 +145,7 @@ const Shop = () => {
         </Col>
 
         <Col>
-          <Card style={{ width: '18rem' }}>
+          <Card>
             <Card.Img variant="top" src={coffee3} />
             <Card.Body>
               <Card.Title>Apple Crisp frappuccino</Card.Title>
@@ -141,7 +162,7 @@ const Shop = () => {
         </Col>
 
         <Col>
-          <Card style={{ width: '18rem' }}>
+          <Card>
             <Card.Img variant="top" src={coffee4} />
             <Card.Body>
               <Card.Title>Apple Crisp frappuccino</Card.Title>
@@ -157,16 +178,8 @@ const Shop = () => {
           </Card>
         </Col>
 
-        <Col></Col>
-      </Row>
-
-      {/* // ---------------------- LINE 2 */}
-
-      <Row>
-        <Col></Col>
-        
         <Col>
-          <Card style={{ width: '18rem' }}>
+          <Card>
             <Card.Img variant="top" src={coffee5} />
             <Card.Body>
               <Card.Title>Apple Crisp frappuccino</Card.Title>
@@ -182,9 +195,14 @@ const Shop = () => {
             </Card.Body>
           </Card>
         </Col>
+    </Row>
 
+
+    {/* // ---------------------- LINE 2 */}
+
+    <Row>
         <Col>
-          <Card style={{ width: '18rem' }}>
+          <Card>
             <Card.Img variant="top" src={coffee6} />
             <Card.Body>
               <Card.Title>Apple Crisp frappuccino</Card.Title>
@@ -201,7 +219,7 @@ const Shop = () => {
         </Col>
 
         <Col>
-          <Card style={{ width: '18rem' }}>
+          <Card>
             <Card.Img variant="top" src={coffee7} />
             <Card.Body>
               <Card.Title>Apple Crisp frappuccino</Card.Title>
@@ -218,7 +236,7 @@ const Shop = () => {
         </Col>
 
         <Col>
-          <Card style={{ width: '18rem' }}>
+          <Card>
             <Card.Img variant="top" src={coffee8} />
             <Card.Body>
               <Card.Title>Apple Crisp frappuccino</Card.Title>
@@ -234,7 +252,6 @@ const Shop = () => {
           </Card>
         </Col>
 
-        <Col></Col>
       </Row>
     </>
   );
