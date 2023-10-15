@@ -4,6 +4,7 @@ const HomeContainer = styled.div`
   background: transparent;
 
   .carousel {
+    margin-bottom: 6rem;
     a.carousel-control-next img,
     a.carousel-control-prev img {
       width: 3.5rem !important;
@@ -20,7 +21,7 @@ const HomeContainer = styled.div`
   }
 
   .card {
-    margin: 6rem 0 4rem;
+    margin: 2rem 0 4rem;
   }
   .card svg.bi {
     margin: 0 0.2rem 0.2rem 0;
