@@ -18,6 +18,31 @@ const HomeContainer = styled.div`
       padding: 1.5rem;
     } */
   }
+
+  .card,
+  .card .card-img-top {
+    border: 0;
+    border-radius: 7px !important;
+  }
+  .card .card-img-top {
+    border-radius: 7px 45px 7px 7px !important;
+  }
+  .card .card-title {
+    color: ${(props) => props.theme.default};
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 2.06px;
+    font-weight: 700;
+    line-height: 2rem;
+  }
+  .card .card-body {
+    text-align: center;
+  }
+  .card .card-text {
+    padding: 1rem 0;
+    color: ${(props) => props.theme.black};
+    font-size: 0.8rem;
+  }
 `;
 
 export { HomeContainer };

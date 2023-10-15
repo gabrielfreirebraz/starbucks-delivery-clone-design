@@ -30,6 +30,9 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
       : css`
           transition: background 0.2s;
           border: solid 1px ${(props) => props.theme.default};
+          font-size: 0.8rem;
+          text-transform: uppercase;
+          font-weight: 400;
 
           &:hover {
             background: ${(props) => props.theme.white};

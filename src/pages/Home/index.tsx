@@ -73,7 +73,7 @@ const Shop = () => {
       <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={coffe1} />
       <Card.Body>
-        <Card.Title>Apple Crisp frappucino</Card.Title>
+        <Card.Title>Apple Crisp frappuccino</Card.Title>
         <Card.Text>
           Bebida batida com gelo, com ou sem café, xarope de maça com açucar mascavo, finalizado com chantilly de baunilha e uma deliciosa calda de maça caramelizada com especiarias.
         </Card.Text>
