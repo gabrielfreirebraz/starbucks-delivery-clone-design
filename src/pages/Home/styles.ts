@@ -19,6 +19,19 @@ const HomeContainer = styled.div`
     } */
   }
 
+  .card {
+    margin: 6rem 0 4rem;
+  }
+  .card svg.bi {
+    margin: 0 0.2rem 0.2rem 0;
+    width: 14px;
+  }
+  .card .card-img-top {
+    transition: margin-top 0.2s;
+  }
+  .card:hover .card-img-top {
+    margin-top: -0.5rem;
+  }
   .card,
   .card .card-img-top {
     border: 0;
