@@ -12,12 +12,6 @@ const HomeContainer = styled.div`
       padding: 0.9rem;
       border-radius: 35px;
     }
-    /* span.carousel-control-next-icon,
-    span.carousel-control-prev-icon {
-      background: #f0f0f0;
-      border-radius: 25px;
-      padding: 1.5rem;
-    } */
   }
 
   #title-shop {
@@ -52,12 +46,6 @@ const HomeContainer = styled.div`
     font-weight: 700;
     margin: 3rem 0 2rem;
   }
-  /* .sub-title-shop .traco {
-    border-bottom: solid 3px ${(props) => props.theme.darkGreen};
-    height: 16px;
-    width: 20px;
-    margin: 0 1rem;
-  } */
   .card {
     margin: 2rem 0 4rem;
   }
@@ -94,6 +82,18 @@ const HomeContainer = styled.div`
     padding: 1rem 0;
     color: ${(props) => props.theme.black};
     font-size: 0.8rem;
+  }
+  .card .card-text .preco-item {
+    color: ${(props) => props.theme.default};
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 900;
+
+    span {
+      font-weight: 400;
+      font-size: 0.9rem;
+      margin: 0 0.1rem;
+    }
   }
 `;
 
