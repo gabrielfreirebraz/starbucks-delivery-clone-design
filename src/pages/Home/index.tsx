@@ -137,7 +137,7 @@ const Shop = () => {
                     </svg>
                   </ButtonQtdContainer>
 
-                  <input type='number' min={0} max={6} className='txt-qtd' defaultValue={0}></input>
+                  <input type='number' min={0} max={6} className='txt-qtd' defaultValue={1}></input>
 
                   <ButtonQtdContainer>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-plus-lg" viewBox="0 0 16 16">
