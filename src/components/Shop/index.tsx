@@ -1,4 +1,4 @@
-import { ButtonGroup, Card, Col, Row } from "react-bootstrap";
+import { Card, Col, Row } from "react-bootstrap";
 import { ButtonContainer } from "../Button/styles";
 
 import coffee1 from './../../assets/images/shop/coffee1.jpeg';
@@ -57,17 +57,7 @@ export const Shop = () => {
               <Card.Text>
                 Bebida batida com gelo, com ou sem café, xarope de maça com açucar mascavo, finalizado com chantilly de baunilha e uma deliciosa calda de maça caramelizada com especiarias.
 
-
-                <br/><br/>
-                <label className='preco-item'><span>R$</span> 21,00</label>
-
-                <br/>
-                <ButtonGroup className='btn-group-qtd'>
-                 
-                  <Quantity />
-                </ButtonGroup>
-                
-
+                <Quantity price={21.00} />
               </Card.Text>
 
 

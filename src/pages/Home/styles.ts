@@ -84,20 +84,25 @@ const HomeContainer = styled.div`
     font-size: 0.8rem;
   }
   .card .card-text .preco-item {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
     color: ${(props) => props.theme.default};
-    margin: 1rem 0 0.5rem;
+    margin: 2rem 0 1rem;
     font-size: 1.25rem;
     font-weight: 900;
 
     span {
       font-weight: 400;
       font-size: 0.9rem;
-      margin: 0 0.1rem;
+      margin: 0 0.2rem;
     }
   }
 
   .btn-group-qtd {
     margin: 0.2rem 0 1rem;
+    display: flex;
+    justify-content: center;
   }
   input.txt-qtd {
     width: 50px;
