@@ -6,12 +6,18 @@ declare module "*.svg";
 interface IAppContext {
   products: TProduct[];
   cartItems?: TCartItem[] | null;
-  onClickAddCart: (newItem: TCartItem) => void;
+  onClickAddCart: (...props) => void;
 }
 
 type TProduct = {
   name: string;
   desc?: string;
   price: number;
+  quantity?: number;
   image?: string;
+};
+
+type TCart = {
+  productItems: TProduct[];
+  totalPrice: number;
 };

@@ -6,11 +6,11 @@ import { CardProvider } from "../../contexts/defaultContext";
 
 export const Quantity = () => {
 
-  const {newPrice, subtractItem, addItem, onChangeQuantity, quantity} = useContext(CardProvider)
+  const { currentPrice, subtractItem, addItem, onChangeQuantity, currentQuantity } = useContext(CardProvider)
 
     return (
       <>
-        <label className='preco-item'><span>R$</span> {newPrice}</label>
+        <label className='preco-item'><span>R$</span> {currentPrice}</label>
       
         <ButtonGroup className='btn-group-qtd'>
           <ButtonQtdContainer>
@@ -19,7 +19,7 @@ export const Quantity = () => {
             </svg>
           </ButtonQtdContainer>
           
-          <input type='number' className='txt-qtd' value={quantity} onChange={(e) => onChangeQuantity(e.target.value)}></input>
+          <input type='number' className='txt-qtd' value={currentQuantity} onChange={(e) => onChangeQuantity(e.target.value)}></input>
           
           <ButtonQtdContainer>
             <svg onClick={addItem} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-plus-lg" viewBox="0 0 16 16">

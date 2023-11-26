@@ -11,8 +11,9 @@ function App() {
 
   const [cartItems, setCartItems] = useState<TProduct[]>([]);
 
-  const onClickAddCart = (newItem: TProduct) => {
+  const onClickAddCart = (newItem: TProduct): void => {
     setCartItems((items) => [...items, newItem], );
+    console.log([...cartItems, newItem]);
   }
 
   const providerProps: IAppContext = {
