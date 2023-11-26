@@ -9,10 +9,10 @@ import { products } from "./api/products"
 
 function App() {
 
-  const [cartItems, setCartItems] = useState<TCartItem[] | null>(null);
+  const [cartItems, setCartItems] = useState<TProduct[]>([]);
 
-  const onClickAddCart = (newItem: TCartItem) => {
-    setCartItems((items) => items && [...items, newItem], );
+  const onClickAddCart = (newItem: TProduct) => {
+    setCartItems((items) => [...items, newItem], );
   }
 
   const providerProps: IAppContext = {

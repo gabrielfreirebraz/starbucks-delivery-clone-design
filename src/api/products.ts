@@ -2,7 +2,7 @@ const enum defaultPath {
   IMAGE = "./shop",
 }
 
-export const products = [
+export const products: TProduct[] = [
   {
     name: "Apple Crisp frappuccino",
     desc: "Bebida batida com gelo, com ou sem café, xarope de maça com açucar mascavo, finalizado com chantilly de baunilha e uma deliciosa calda de maça caramelizada com especiarias.",

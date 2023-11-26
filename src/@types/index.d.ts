@@ -9,13 +9,6 @@ interface IAppContext {
   onClickAddCart: (newItem: TCartItem) => void;
 }
 
-type TCartItem = {
-  name: string;
-  desc?: string;
-  price: number;
-  image?: string;
-};
-
 type TProduct = {
   name: string;
   desc?: string;
