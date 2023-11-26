@@ -19,7 +19,9 @@ export const Quantity = ({ price }: { price: number }) => {
     }
 
     function onChangeQuantity(newValue: number | string) {
-      setValue(Number(newValue));
+      const newValueAsNumber = Number(newValue);
+      setValue(v => newValueAsNumber > 0 ? newValueAsNumber : v);
+      setNewPrice(p => newValueAsNumber > 0 ? price * newValueAsNumber : p);
     }
 
     return (

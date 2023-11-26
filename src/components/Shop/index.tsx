@@ -79,6 +79,8 @@ export const Shop = () => {
               <Card.Title>Apple Crisp frappuccino</Card.Title>
               <Card.Text>
                 Bebida batida com gelo, com ou sem café, xarope de maça com açucar mascavo, finalizado com chantilly de baunilha e uma deliciosa calda de maça caramelizada com especiarias.
+                
+                <Quantity price={18.00} />
               </Card.Text>
               <ButtonContainer variant={"default"}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-cart-plus-fill" viewBox="0 0 16 16">
@@ -96,6 +98,8 @@ export const Shop = () => {
               <Card.Title>Apple Crisp frappuccino</Card.Title>
               <Card.Text>
                 Bebida batida com gelo, com ou sem café, xarope de maça com açucar mascavo, finalizado com chantilly de baunilha e uma deliciosa calda de maça caramelizada com especiarias.
+              
+                <Quantity price={19.50} />
               </Card.Text>
               <ButtonContainer variant={"default"}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-cart-plus-fill" viewBox="0 0 16 16">
@@ -113,6 +117,8 @@ export const Shop = () => {
               <Card.Title>Apple Crisp frappuccino</Card.Title>
               <Card.Text>
                 Bebida batida com gelo, com ou sem café, xarope de maça com açucar mascavo, finalizado com chantilly de baunilha e uma deliciosa calda de maça caramelizada com especiarias.
+                
+                <Quantity price={16} />
               </Card.Text>
               <ButtonContainer variant={"default"}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-cart-plus-fill" viewBox="0 0 16 16">
@@ -130,6 +136,8 @@ export const Shop = () => {
               <Card.Title>Apple Crisp frappuccino</Card.Title>
               <Card.Text>
                 Bebida batida com gelo, com ou sem café, xarope de maça com açucar mascavo, finalizado com chantilly de baunilha e uma deliciosa calda de maça caramelizada com especiarias.
+              
+                <Quantity price={18} />
               </Card.Text>
               {/* R$ 21,00 */}
               <ButtonContainer variant={"default"}>
