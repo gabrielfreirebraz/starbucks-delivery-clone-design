@@ -85,8 +85,8 @@ const HomeContainer = styled.div`
   }
   .card .card-text .preco-item {
     color: ${(props) => props.theme.default};
-    margin-top: 1rem;
-    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem;
+    font-size: 1.25rem;
     font-weight: 900;
 
     span {

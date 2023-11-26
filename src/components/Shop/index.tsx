@@ -1,5 +1,5 @@
 import { ButtonGroup, Card, Col, Row } from "react-bootstrap";
-import { ButtonContainer, ButtonQtdContainer } from "../Button/styles";
+import { ButtonContainer } from "../Button/styles";
 
 import coffee1 from './../../assets/images/shop/coffee1.jpeg';
 import coffee2 from './../../assets/images/shop/coffee2.jpeg';
@@ -9,6 +9,7 @@ import coffee5 from './../../assets/images/shop/coffee5.jpeg';
 import coffee6 from './../../assets/images/shop/coffee6.jpeg';
 import coffee7 from './../../assets/images/shop/coffee7.jpeg';
 import coffee8 from './../../assets/images/shop/coffee8.jpeg';
+import { Quantity } from "../Quantity";
 // import coffee9 from './../../assets/images/shop/coffee9.jpeg';
 // import coffee10 from './../../assets/images/shop/coffee10.jpeg';
 // import coffee11 from './../../assets/images/shop/coffee11.jpeg';
@@ -58,23 +59,12 @@ export const Shop = () => {
 
 
                 <br/><br/>
-                <h5 className='preco-item'><span>R$</span> 21,00</h5>
+                <label className='preco-item'><span>R$</span> 21,00</label>
 
                 <br/>
                 <ButtonGroup className='btn-group-qtd'>
-                  <ButtonQtdContainer>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-dash-lg" viewBox="0 0 16 16">
-                      <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/>
-                    </svg>
-                  </ButtonQtdContainer>
-
-                  <input type='number' min={0} max={6} className='txt-qtd' defaultValue={1}></input>
-
-                  <ButtonQtdContainer>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-plus-lg" viewBox="0 0 16 16">
-                      <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
-                    </svg>
-                  </ButtonQtdContainer>
+                 
+                  <Quantity />
                 </ButtonGroup>
                 
 
