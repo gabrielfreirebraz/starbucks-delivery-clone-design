@@ -15,7 +15,7 @@ function App() {
     setCartItems((items) => items && [...items, newItem], );
   }
 
-  const providerProps: IProviderProps = {
+  const providerProps: IAppContext = {
     products,
     cartItems,
     onClickAddCart
