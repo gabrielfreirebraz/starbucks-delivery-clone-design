@@ -1,4 +1,4 @@
-import { useContext, useState, memo } from "react";
+import { useContext, useState, memo, useEffect } from "react";
 import { Quantity } from "../../Quantity";
 import { AppProvider, CardProvider } from "../../../contexts/defaultContext";
 import { Card } from "react-bootstrap";
@@ -14,64 +14,27 @@ export const ProductItem = memo((product: TProduct) => {
 
   const { onClickAddCart }: IAppContext = useContext(AppProvider);
 
-  function addItem() {
-
-    setCurrentPrice((p: number) => {
-      const newPrice = p + product.price
-
-      setUpdatedItemToCart((p: TProduct) => { 
-        return {...p, price: newPrice} 
-      });
-      return newPrice;
-    });    
-    setQuantity((v: number) => {
-      const newQuantity = v+1;
-      
-      setUpdatedItemToCart((p: TProduct) => { 
-        return {...p, quantity: newQuantity} 
-      });
-      return newQuantity
+  useEffect(() => {
+    setUpdatedItemToCart((p: TProduct) => { 
+      return { ...p, price: currentPrice, quantity: currentQuantity } 
     });
+
+  }, [currentQuantity, currentPrice]);
+
+  function addItem() {
+    setCurrentPrice((p: number) => p + product.price);    
+    setQuantity((v: number) => v+1);
   }
 
   function subtractItem() {
-    setQuantity((v: number) => {
-      const newQuantity = (v > 1 ? v-1 : v);
-
-      setUpdatedItemToCart((p: TProduct) => { 
-        return {...p, quantity: newQuantity} 
-      });
-      return newQuantity;
-    });
-    setCurrentPrice((p: number) => {
-      const newPrice = p === product.price ? p : p - product.price
-
-      setUpdatedItemToCart((p: TProduct) => { 
-        return {...p, price: newPrice} 
-      });
-      return newPrice;
-    });
+    setQuantity((v: number) => (v > 1 ? v-1 : v));
+    setCurrentPrice((p: number) => p === product.price ? p : p - product.price );
   }
 
   function onChangeQuantity(newValue: number | string) {
     const newValueAsNumber = Number(newValue);
-    setQuantity(v => {
-      const newQuantity = newValueAsNumber > 0 ? newValueAsNumber : v
-
-      setUpdatedItemToCart((p: TProduct) => { 
-        return {...p, quantity: newQuantity} 
-      });
-      return newQuantity;
-    });
-
-    setCurrentPrice(p => {
-      const newPrice = newValueAsNumber > 0 ? product.price * newValueAsNumber : p
-
-      setUpdatedItemToCart((p: TProduct) => { 
-        return {...p, price: newPrice} 
-      });
-      return newPrice;
-    });
+    setQuantity(v => newValueAsNumber > 0 ? newValueAsNumber : v );
+    setCurrentPrice(p => newValueAsNumber > 0 ? product.price * newValueAsNumber : p);
   }
 
   const providerProps = {
