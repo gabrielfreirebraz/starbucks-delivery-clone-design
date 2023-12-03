@@ -11,10 +11,14 @@ import iconPrev from './../../assets/images/chevron-left.svg';
 
 import './styles'
 import { Shop } from '../../components/Shop';
+import { Cart } from './Cart';
+import { useContext } from 'react';
+import { AppProvider } from '../../contexts/defaultContext';
 
 
 const Home = () => {
 
+  const { cartOn } = useContext(AppProvider);
   return(
     <HomeContainer>
       <Row>
@@ -33,6 +37,7 @@ const Home = () => {
         <Col />
       </Row>
       
+      <Cart on={cartOn}/>
     </HomeContainer>
   );
 }

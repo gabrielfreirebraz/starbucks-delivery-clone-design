@@ -10,16 +10,20 @@ import { products } from "./api/products"
 function App() {
 
   const [cartItems, setCartItems] = useState<TProduct[]>([]);
+  const [cartOn, setCartOn] = useState<boolean>(false);
 
   const onClickAddCart = (newItem: TProduct): void => {
     setCartItems((items) => [...items, newItem], );
+    //setCartOn(true);
     console.log([...cartItems, newItem]);
   }
 
   const providerProps: IAppContext = {
     products,
     cartItems,
-    onClickAddCart
+    onClickAddCart,
+    cartOn,
+    setCartOn
   };
 
   return (    

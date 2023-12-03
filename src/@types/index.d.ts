@@ -7,6 +7,8 @@ interface IAppContext {
   products: TProduct[];
   cartItems?: TCartItem[] | null;
   onClickAddCart: (...props) => void;
+  cartOn: boolean;
+  setCartOn: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 type TProduct = {

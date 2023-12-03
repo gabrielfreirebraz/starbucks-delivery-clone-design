@@ -6,8 +6,13 @@ import iconCart from './../../assets/images/icon-cart.svg';
 import imgHistoria from './../../assets/images/sb-historias-logo.svg'
 import { HeaderContainer } from './styles';
 import { ButtonContainer } from '../Button/styles';
+import { useContext } from 'react';
+import { AppProvider } from '../../contexts/defaultContext';
 
 export const Header = () => {
+
+  const { setCartOn } = useContext(AppProvider);
+
   return (
     <HeaderContainer>
       <Navbar expand="lg" className="bg-body-tertiary justify-content-between">
@@ -31,7 +36,7 @@ export const Header = () => {
             <div id='navRight'>
                 <img src={imgHistoria} className='imgHistoria' />
                 <img src={iconCart} className='iconCart' />
-                <a href="#">Meus cafés</a>
+                <a href="#" onClick={() => setCartOn((c) => !c)}>Meus cafés</a>
 
                 <ButtonContainer variant={'primary'}>Entrar</ButtonContainer>
                 <ButtonContainer variant={'secondary'} outline={'true'}>Cadastre-se</ButtonContainer>
