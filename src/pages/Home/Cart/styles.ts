@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export const CartContainer = styled.div<{ on?: 0 | 1 }>`
   position: fixed;
   right: 0;
-  top: 6rem;
+  top: 0;
   width: 20.625rem;
   min-height: 100vh;
   z-index: 100;

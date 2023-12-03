@@ -14,7 +14,7 @@ function App() {
 
   const onClickAddCart = (newItem: TProduct): void => {
     setCartItems((items) => [...items, newItem], );
-    //setCartOn(true);
+    setCartOn((c) => !c);
     console.log([...cartItems, newItem]);
   }
 
