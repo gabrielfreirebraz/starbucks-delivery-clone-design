@@ -50,12 +50,12 @@ export const Shop = () => {
 
       <Row>
         
-        {products.map((CardProductItem: TProduct) => {
+        {products.map((product: IProduct) => {
           
             return (
 
               <Col key={uuidv4()}>
-                <ProductItem {...CardProductItem } />
+                <ProductItem {...product} />
               </Col>
             );
         })}

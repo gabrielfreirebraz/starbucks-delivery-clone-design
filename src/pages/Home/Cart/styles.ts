@@ -63,7 +63,7 @@ export const CartItemContainer = styled.div`
     padding: 0.5rem 1rem;
     display: flex;
     flex-direction: column;
-    /* justify-content: baseline; */
+    justify-content: baseline;
 
     h6 {
       color: ${(props) => props.theme.black};

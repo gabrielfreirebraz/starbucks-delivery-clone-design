@@ -6,22 +6,31 @@ import { GlobalStyle } from "./styles/global"
 import { AppProvider } from "./contexts/defaultContext"
 import { useState } from "react"
 import { products } from "./api/products"
+import { v4 as uuidv4 } from "uuid"
 
 function App() {
 
-  const [cartItems, setCartItems] = useState<TProduct[]>([]);
+  const [cartItems, setCartItems] = useState<ICartItem[]>([]);
   const [cartOn, setCartOn] = useState<boolean>(false);
 
-  const onClickAddCart = (newItem: TProduct): void => {
-    setCartItems((items) => [...items, newItem], );
+  const onClickAddCart = (newItem: ICartItem): void => {
+    const newProductItem = {...newItem, itemId: uuidv4()};
+
+    setCartItems((items) => [...items, newProductItem], );
     setCartOn(true);
-    console.log([...cartItems, newItem]);
+    console.log([...cartItems, newProductItem]);
+  }
+  const onClickRemoveCart = (id: string) => {
+
+    console.log(id)
+    setCartItems((items) => items.filter((item) => item.itemId !== id));
   }
 
   const providerProps: IAppContext = {
     products,
     cartItems,
     onClickAddCart,
+    onClickRemoveCart,
     cartOn,
     setCartOn
   };

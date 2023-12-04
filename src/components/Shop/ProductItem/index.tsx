@@ -6,16 +6,16 @@ import { ButtonContainer } from "../../Button/styles";
 
 
 
-export const ProductItem = memo((product: TProduct) => {
+export const ProductItem = memo((product: IProduct) => {
 
   const [currentQuantity, setQuantity] = useState<number>(product.quantity ?? 1);
   const [currentPrice, setCurrentPrice] = useState<number>(product.price ?? 0);
-  const [updatedItemToCart, setUpdatedItemToCart] = useState<TProduct>(product); 
+  const [updatedItemToCart, setUpdatedItemToCart] = useState<IProduct>(product); 
 
   const { onClickAddCart }: IAppContext = useContext(AppProvider);
 
   useEffect(() => {
-    setUpdatedItemToCart((p: TProduct) => { 
+    setUpdatedItemToCart((p: IProduct) => { 
       return { ...p, price: currentPrice, quantity: currentQuantity } 
     });
 

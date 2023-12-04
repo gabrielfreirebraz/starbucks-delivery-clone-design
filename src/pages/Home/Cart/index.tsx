@@ -8,7 +8,7 @@ import iconCart from './../../../assets/images/icon-cart.svg';
 
 export const Cart = (props: { on: boolean }) => {
 
-  const { cartItems } = useContext(AppProvider);
+  const { cartItems, onClickRemoveCart } = useContext(AppProvider);
 
   const cartOn = props.on ? 1 : 0;
   return (
@@ -29,7 +29,7 @@ export const Cart = (props: { on: boolean }) => {
               <h6>{item.name}</h6>
               <h4>{newPrice}</h4>
             </div>
-            <a href="#" className="cart-item__trashIcon">
+            <a href="#" className="cart-item__trashIcon" onClick={() => onClickRemoveCart(item.itemId)}>
               <BsFillTrashFill />
             </a>
 

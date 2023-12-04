@@ -4,22 +4,23 @@ declare module "*.png";
 declare module "*.svg";
 
 interface IAppContext {
-  products: TProduct[];
-  cartItems?: TCartItem[] | null;
+  products: IProduct[];
+  cartItems?: ICartItem[] | null;
   onClickAddCart: (...props) => void;
+  onClickRemoveCart: (id: string) => void;
   cartOn: boolean;
   setCartOn: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-type TProduct = {
+interface IProduct {
+  productId: number;
   name: string;
   desc?: string;
   price: number;
   quantity?: number;
   image?: string;
-};
+}
 
-type TCart = {
-  productItems: TProduct[];
-  totalPrice: number;
-};
+interface ICartItem extends IProduct {
+  itemId: string;
+}
