@@ -48,13 +48,22 @@ export const CartItemContainer = styled.div`
   justify-content: space-between;
   padding: 1.5rem;
 
-  > div {
+  .cart-item__trashIcon {
+    /* border: solid 3px #000; */
+    display: flex;
+    align-items: center;
+    svg {
+      font-size: 1.2rem;
+      color: ${(props) => props.theme.black};
+    }
+  }
+  .cart-item__desc {
     /* border: solid 1px #000; */
-    min-width: 100%;
+    min-width: 70%;
     padding: 0.5rem 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: baseline; */
 
     h6 {
       color: ${(props) => props.theme.black};
@@ -77,6 +86,6 @@ export const CartItemContainer = styled.div`
     display: flex;
     align-items: center;
     width: fit-content;
-    max-height: 3.5rem;
+    max-height: 3.4rem;
   }
 `;

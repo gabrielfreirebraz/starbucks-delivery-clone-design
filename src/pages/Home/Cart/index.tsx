@@ -2,7 +2,9 @@ import { useContext } from "react";
 import { CartContainer, CartItemContainer } from "./styles"
 import { AppProvider } from "../../../contexts/defaultContext";
 import { v4 as uuidv4 } from "uuid"
+import { BsFillTrashFill } from "react-icons/bs";
 import iconCart from './../../../assets/images/icon-cart.svg';
+
 
 export const Cart = (props: { on: boolean }) => {
 
@@ -22,10 +24,15 @@ export const Cart = (props: { on: boolean }) => {
 
           <CartItemContainer key={uuidv4()}>
             <img src={item.image} alt={"product"} className="cart-item__image" />
-            <div>
+            
+            <div className="cart-item__desc">
               <h6>{item.name}</h6>
               <h4>{newPrice}</h4>
             </div>
+            <a href="#" className="cart-item__trashIcon">
+              <BsFillTrashFill />
+            </a>
+
           </CartItemContainer>);
 
       }) : <p>Não há produtos.</p>}
