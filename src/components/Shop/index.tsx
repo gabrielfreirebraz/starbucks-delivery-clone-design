@@ -10,6 +10,7 @@ import coffee8 from './../../assets/images/shop/coffee8.jpeg';
 import { ProductItem } from "./ProductItem";
 import { useContext } from "react";
 import { AppProvider } from "../../contexts/defaultContext";
+import { v4 as uuidv4 } from "uuid"
 
 
 
@@ -49,11 +50,11 @@ export const Shop = () => {
 
       <Row>
         
-        {products.map((CardProductItem: TProduct, i) => {
+        {products.map((CardProductItem: TProduct) => {
           
             return (
 
-              <Col key={i}>
+              <Col key={uuidv4()}>
                 <ProductItem {...CardProductItem } />
               </Col>
             );
