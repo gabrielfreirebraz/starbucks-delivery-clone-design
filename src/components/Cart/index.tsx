@@ -6,6 +6,13 @@ import { BsFillTrashFill } from "react-icons/bs";
 import iconCart from './../../assets/images/icon-cart.svg';
 
 
+
+function convertToPrice(value: number): string {
+  return new Intl.NumberFormat('pt-PT', { style: 'currency', currency: 'BRL', minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(value);
+}
+
+
+
 export const Cart = (props: { on: boolean }) => {
 
   const { cartItems, onClickRemoveCart } = useContext(AppProvider);
@@ -18,8 +25,6 @@ export const Cart = (props: { on: boolean }) => {
 
       {!!cartItems && cartItems?.length > 0 ? cartItems?.map((item) => {
 
-        const newPrice: string = new Intl.NumberFormat('pt-PT', { style: 'currency', currency: 'BRL', minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(item.price);
-        
         return (
 
           <CartItemContainer key={uuidv4()}>
@@ -27,7 +32,7 @@ export const Cart = (props: { on: boolean }) => {
             
             <div className="cart-item__desc">
               <h6>{item.name}</h6>
-              <h4>{newPrice}</h4>
+              <h4>{convertToPrice(item.price)}</h4>
             </div>
             <a href="#" className="cart-item__trashIcon" onClick={() => onClickRemoveCart(item.itemId)}>
               <BsFillTrashFill />
@@ -36,6 +41,12 @@ export const Cart = (props: { on: boolean }) => {
           </CartItemContainer>);
 
       }) : <p>Não há produtos.</p>}
+
+
+        <h4 id="cart__total">
+          {!!cartItems && convertToPrice(
+                              cartItems.reduce((prevPrice, currItem) => prevPrice + currItem.price, 0))}
+        </h4>
     </CartContainer>
   );
 }

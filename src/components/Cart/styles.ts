@@ -39,6 +39,13 @@ export const CartContainer = styled.div<{ on?: 0 | 1 }>`
   p {
     margin: 1.5rem;
   }
+  #cart__total {
+    margin: 4rem 1.5rem;
+    font-size: 2rem;
+    position: absolute;
+    bottom: 0;
+    color: ${(props) => props.theme.primary};
+  }
 `;
 
 export const CartItemContainer = styled.div`
