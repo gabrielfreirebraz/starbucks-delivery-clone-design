@@ -58,7 +58,7 @@ export const CartItemContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1.5rem;
+  padding: 0.75rem 1.5rem;
 
   .cart-item__trashIcon {
     /* border: solid 3px #000; */
