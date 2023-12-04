@@ -11,7 +11,7 @@ import iconPrev from './../../assets/images/chevron-left.svg';
 
 import './styles'
 import { Shop } from '../../components/Shop';
-import { Cart } from './Cart';
+import { Cart } from '../../components/Cart';
 import { useContext } from 'react';
 import { AppProvider } from '../../contexts/defaultContext';
 

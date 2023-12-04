@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { CartContainer, CartItemContainer } from "./styles"
-import { AppProvider } from "../../../contexts/defaultContext";
+import { AppProvider } from "../../contexts/defaultContext";
 import { v4 as uuidv4 } from "uuid"
 import { BsFillTrashFill } from "react-icons/bs";
-import iconCart from './../../../assets/images/icon-cart.svg';
+import iconCart from './../../assets/images/icon-cart.svg';
 
 
 export const Cart = (props: { on: boolean }) => {
