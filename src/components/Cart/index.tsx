@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CartContainer, CartItemContainer } from "./styles"
+import { CartContainer, CartItemContainer, CartScrollContainer } from "./styles"
 import { AppProvider } from "../../contexts/defaultContext";
 import { v4 as uuidv4 } from "uuid"
 import { BsFillTrashFill } from "react-icons/bs";
@@ -23,30 +23,31 @@ export const Cart = (props: { on: boolean }) => {
 
       <h5>Meus cafés&nbsp;<img src={iconCart} className='iconCart' /></h5>
 
-      {!!cartItems && cartItems?.length > 0 ? cartItems?.map((item) => {
+      <CartScrollContainer>
+        {!!cartItems && cartItems?.length > 0 ? cartItems?.map((item) => {
 
-        return (
+          return (
 
-          <CartItemContainer key={uuidv4()}>
-            <img src={item.image} alt={"product"} className="cart-item__image" />
-            
-            <div className="cart-item__desc">
-              <h6>{item.name}</h6>
-              <h4>{convertToPrice(item.price)}</h4>
-            </div>
-            <a href="#" className="cart-item__trashIcon" onClick={() => onClickRemoveCart(item.itemId)}>
-              <BsFillTrashFill />
-            </a>
+            <CartItemContainer key={uuidv4()}>
+              <img src={item.image} alt={"product"} className="cart-item__image" />
+              
+              <div className="cart-item__desc">
+                <h6>{item.name}</h6>
+                <h4>{convertToPrice(item.price)}</h4>
+              </div>
+              <a href="#" className="cart-item__trashIcon" onClick={() => onClickRemoveCart(item.itemId)}>
+                <BsFillTrashFill />
+              </a>
 
-          </CartItemContainer>);
+            </CartItemContainer>);
 
-      }) : <p>Não há produtos.</p>}
+        }) : <p>Não há produtos.</p>}
+      </CartScrollContainer> 
 
-
-        <h4 id="cart__total">
-          {!!cartItems && convertToPrice(
-                              cartItems.reduce((prevPrice, currItem) => prevPrice + currItem.price, 0))}
-        </h4>
+      <h4 id="cart__total">
+        {!!cartItems && convertToPrice(
+                            cartItems.reduce((prevPrice, currItem) => prevPrice + currItem.price, 0))}
+      </h4>
     </CartContainer>
   );
 }

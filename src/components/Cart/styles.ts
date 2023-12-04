@@ -4,13 +4,12 @@ export const CartContainer = styled.div<{ on?: 0 | 1 }>`
   position: fixed;
   right: 0;
   top: 0;
-  width: 20.625rem;
-  min-height: 100vh;
+  width: 24.625rem;
+  height: 100vh;
   z-index: 100;
   background: ${(props) => props.theme.white};
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
 
   ${(props) => {
     return props.on === 1
@@ -42,10 +41,16 @@ export const CartContainer = styled.div<{ on?: 0 | 1 }>`
   #cart__total {
     margin: 4rem 1.5rem;
     font-size: 2rem;
-    position: absolute;
+    position: fixed;
     bottom: 0;
+    width: 100%;
     color: ${(props) => props.theme.primary};
   }
+`;
+
+export const CartScrollContainer = styled.div`
+  overflow-y: auto;
+  height: 65%;
 `;
 
 export const CartItemContainer = styled.div`
@@ -83,7 +88,9 @@ export const CartItemContainer = styled.div`
     h4 {
       color: ${(props) => props.theme.primary};
       font-weight: 700;
+      font-size: 1.2rem;
       margin: 0;
+      margin-top: 0.2rem;
       padding: 0;
     }
   }
