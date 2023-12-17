@@ -45,7 +45,7 @@ export const Cart = (props: { on: boolean }) => {
         }) : <p>Não há produtos.</p>}
       </CartScrollContainer> 
 
-      <ButtonContainer id={"cart__btn_fecharPedido"} variant={'secondary'}>Fechar pedido</ButtonContainer>
+      <ButtonContainer className={!!cartItems && cartItems?.length === 0 ? "disabled" : ""} id={"cart__btn_fecharPedido"} variant={'secondary'}>Fechar pedido</ButtonContainer>
       
       <h4 id="cart__total">
         <h6>TOTAL:</h6>&nbsp;

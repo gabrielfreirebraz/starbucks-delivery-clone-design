@@ -56,6 +56,10 @@ export const CartContainer = styled.div<{ on?: 0 | 1 }>`
     bottom: 0;
     width: 90%;
   }
+  .disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+  }
 `;
 
 export const CartScrollContainer = styled.div`
