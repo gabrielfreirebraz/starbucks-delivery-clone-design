@@ -48,7 +48,7 @@ export const Cart = (props: { on: boolean }) => {
 
       <Link to={"/checkout"}>
         <ButtonContainer 
-          disabled={!!cartItems && cartItems?.length === 0 ? true : false} 
+          disabled={!!cartItems && cartItems?.length === 0} 
           className={!!cartItems && cartItems?.length === 0 ? "disabled" : ""} 
           id={"cart__btn_fecharPedido"} 
           variant={'secondary'}>
