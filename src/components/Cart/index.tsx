@@ -17,7 +17,7 @@ function convertToPrice(value: number): string {
 
 export const Cart = (props: { on: boolean }) => {
 
-  const { cartItems, onClickRemoveCart } = useContext(AppProvider);
+  const { cartItems, onClickRemoveCart, setCartOn } = useContext(AppProvider);
 
   const cartOn = props.on ? 1 : 0;
   return (
@@ -48,6 +48,7 @@ export const Cart = (props: { on: boolean }) => {
 
       <Link to={"/checkout"}>
         <ButtonContainer 
+          onClick={() => setCartOn(false)}
           disabled={!!cartItems && cartItems?.length === 0} 
           className={!!cartItems && cartItems?.length === 0 ? "disabled" : ""} 
           id={"cart__btn_fecharPedido"} 
