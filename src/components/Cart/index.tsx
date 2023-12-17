@@ -4,6 +4,7 @@ import { AppProvider } from "../../contexts/defaultContext";
 import { v4 as uuidv4 } from "uuid"
 import { BsFillTrashFill } from "react-icons/bs";
 import iconCart from './../../assets/images/icon-cart.svg';
+import { ButtonContainer } from "../Button/styles";
 
 
 
@@ -44,10 +45,15 @@ export const Cart = (props: { on: boolean }) => {
         }) : <p>Não há produtos.</p>}
       </CartScrollContainer> 
 
+      <ButtonContainer id={"cart__btn_fecharPedido"} variant={'secondary'}>Fechar pedido</ButtonContainer>
+      
       <h4 id="cart__total">
-        {!!cartItems && convertToPrice(
-                            cartItems.reduce((prevPrice, currItem) => prevPrice + currItem.price, 0))}
+        <h6>TOTAL:</h6>&nbsp;
+        <span>{!!cartItems && convertToPrice(
+                            cartItems.reduce((prevPrice, currItem) => prevPrice + currItem.price, 0))}</span>
       </h4>
+
+      
     </CartContainer>
   );
 }

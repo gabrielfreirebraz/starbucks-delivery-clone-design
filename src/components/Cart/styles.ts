@@ -39,12 +39,22 @@ export const CartContainer = styled.div<{ on?: 0 | 1 }>`
     margin: 1.5rem;
   }
   #cart__total {
-    margin: 4rem 1.5rem;
-    font-size: 2rem;
-    position: fixed;
-    bottom: 0;
+    display: flex;
+    align-items: baseline;
+    margin: 4rem 2rem;
+    font-size: 1.5rem;
     width: 100%;
     color: ${(props) => props.theme.primary};
+    span {
+      font-weight: bold;
+    }
+  }
+  #cart__btn_fecharPedido {
+    margin: 0rem 1.5rem 4rem;
+    position: fixed;
+    padding: 0.35rem;
+    bottom: 0;
+    width: 90%;
   }
 `;
 
