@@ -17,7 +17,7 @@ export const Header = () => {
     <HeaderContainer>
       <Navbar expand="lg" className="bg-body-tertiary justify-content-between">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/home">
             <img src={logo} height={50} />
           </Navbar.Brand>
           

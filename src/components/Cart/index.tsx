@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from "uuid"
 import { BsFillTrashFill } from "react-icons/bs";
 import iconCart from './../../assets/images/icon-cart.svg';
 import { ButtonContainer } from "../Button/styles";
+import { Link } from "react-router-dom";
 
 
 
@@ -45,8 +46,17 @@ export const Cart = (props: { on: boolean }) => {
         }) : <p>Não há produtos.</p>}
       </CartScrollContainer> 
 
-      <ButtonContainer className={!!cartItems && cartItems?.length === 0 ? "disabled" : ""} id={"cart__btn_fecharPedido"} variant={'secondary'}>Fechar pedido</ButtonContainer>
-      
+      <Link to={"/checkout"}>
+        <ButtonContainer 
+          disabled={!!cartItems && cartItems?.length === 0 ? true : false} 
+          className={!!cartItems && cartItems?.length === 0 ? "disabled" : ""} 
+          id={"cart__btn_fecharPedido"} 
+          variant={'secondary'}>
+            
+          Fechar pedido
+        </ButtonContainer>
+      </Link>
+
       <h4 id="cart__total">
         <h6>TOTAL:</h6>&nbsp;
         <span>{!!cartItems && convertToPrice(
