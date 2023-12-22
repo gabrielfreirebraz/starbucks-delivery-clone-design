@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const CheckoutContainer = styled.div`
   #checkout {
-    /* border: solid 1px #000; */
-    min-height: 30rem;
+    min-height: 40rem;
     max-height: fit-content;
     display: flex;
     flex-direction: row;
@@ -14,7 +13,6 @@ export const CheckoutContainer = styled.div`
 
     .blocks-1 {
       width: 50%;
-      /* border: solid 4px red; */
       display: flex;
       flex-direction: column;
       gap: 1rem;
@@ -31,7 +29,9 @@ export const CheckoutContainer = styled.div`
     }
     .blocks-2 {
       width: 50%;
-      /* border: solid 4px red; */
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
 
       .block {
         background-color: ${(props) => props.theme.secondary};
@@ -40,13 +40,17 @@ export const CheckoutContainer = styled.div`
         width: 100%;
       }
     }
-  }
-  #checkout h5 {
-    color: ${(props) => props.theme.darkGreen};
-    font-weight: 400;
-  }
-  #checkout h5:last-child {
-    font-weight: 700 !important;
+    h5 {
+      color: ${(props) => props.theme.darkGreen};
+      font-weight: 400;
+      margin: 2.5rem 0 1rem 2.5rem;
+    }
+    h6 {
+      color: ${(props) => props.theme.darkGreen};
+      font-weight: 400;
+      font-size: 0.85rem;
+      margin: 0 4rem;
+    }
   }
 
   .title-checkout {
