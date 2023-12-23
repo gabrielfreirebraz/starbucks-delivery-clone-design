@@ -1,10 +1,13 @@
 import { useContext } from "react";
 import { Cart } from "../../components/Cart";
 import { AppProvider } from "../../contexts/defaultContext";
+
 import { CheckoutContainer } from "./styles";
 import { Col, Row } from "react-bootstrap";
 import { LiaMapMarkerSolid } from "react-icons/lia";
 import { MdOutlineAttachMoney, MdOutlineCheck } from "react-icons/md";
+import { ButtonContainer } from "../../components/Button/styles";
+import FormAddress from "./FormAddress";
 
 
 
@@ -31,7 +34,9 @@ export const Checkout = () => {
               <div className="blocks-1">
                 <div className="block">
                   <h5><LiaMapMarkerSolid />&nbsp;Endereço de entrega</h5>
-                  <h6>Informe o endereço onde deseja receber seu pedido</h6>                  
+                  <h6>Informe o endereço onde deseja receber seu pedido</h6>  
+
+                  <FormAddress/>
                 </div>
 
                 <div className="block">
@@ -44,6 +49,9 @@ export const Checkout = () => {
                 <div className="block">
                   <h5><MdOutlineCheck />&nbsp;Cafés selecionados</h5>
                   
+                  <ButtonContainer variant="primary" type="submit">
+                    Confirmar pedido
+                  </ButtonContainer>
                 </div>
               </div>
               

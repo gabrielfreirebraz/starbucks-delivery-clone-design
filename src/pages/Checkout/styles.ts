@@ -18,12 +18,12 @@ export const CheckoutContainer = styled.div`
       gap: 1rem;
 
       .block:first-child {
-        height: 70%;
+        height: fit-content;
       }
       .block {
         background-color: ${(props) => props.theme.secondary};
         border-radius: 4px;
-        height: 30%;
+        height: 100%;
         width: 100%;
       }
     }
