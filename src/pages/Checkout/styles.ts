@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const CheckoutContainer = styled.div`
   #checkout {
     min-height: 40rem;
-    max-height: fit-content;
+    min-height: fit-content;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -12,7 +12,7 @@ export const CheckoutContainer = styled.div`
     gap: 1rem;
 
     .blocks-1 {
-      width: 50%;
+      width: 65%;
       display: flex;
       flex-direction: column;
       gap: 1rem;
@@ -28,7 +28,7 @@ export const CheckoutContainer = styled.div`
       }
     }
     .blocks-2 {
-      width: 50%;
+      width: 35%;
       display: flex;
       flex-direction: column;
       gap: 1rem;
@@ -36,7 +36,7 @@ export const CheckoutContainer = styled.div`
       .block {
         background-color: ${(props) => props.theme.secondary};
         border-radius: 4px 35px;
-        height: 100%;
+        height: fit-content;
         width: 100%;
       }
     }
