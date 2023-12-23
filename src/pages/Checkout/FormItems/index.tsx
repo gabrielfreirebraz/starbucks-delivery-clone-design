@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { ButtonContainer } from "../../../components/Button/styles"
-import { AppProvider } from "../../../contexts/defaultContext";
+import { AppProvider, CheckoutProvider } from "../../../contexts/defaultContext";
 import { CheckoutItemContainer, FormItemsContainer } from "./styles"
+import { Link } from "react-router-dom";
 
 function convertToPrice(value: number): string {
   return new Intl.NumberFormat('pt-PT', { style: 'currency', currency: 'BRL', minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(value);
@@ -47,9 +48,11 @@ export const FormItems = () => {
             
         </div>
 
+        
         <ButtonContainer variant="primary" type="submit">
-          Confirmar pedido
+            Confirmar pedido
         </ButtonContainer>
+        
       </div>
     </FormItemsContainer>
   )
