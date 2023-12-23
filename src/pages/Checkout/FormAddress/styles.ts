@@ -8,7 +8,7 @@ export const FormAddressContainer = styled.div`
       border: solid 1px ${(props) => props.theme.secondary};
     }
     input:focus {
-      box-shadow: 0px 0px 2px 2px ${(props) => props.theme.default};
+      box-shadow: 0px 0px 1px 1px ${(props) => props.theme.default};
       border: solid 1px ${(props) => props.theme.default};
     }
     input::placeholder {

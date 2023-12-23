@@ -7,7 +7,8 @@ import { Col, Row } from "react-bootstrap";
 import { LiaMapMarkerSolid } from "react-icons/lia";
 import { MdOutlineAttachMoney, MdOutlineCheck } from "react-icons/md";
 import { ButtonContainer } from "../../components/Button/styles";
-import FormAddress from "./FormAddress";
+import { FormAddress } from "./FormAddress";
+import { FormPayment } from "./FormPayment";
 
 
 
@@ -42,6 +43,8 @@ export const Checkout = () => {
                 <div className="block">
                   <h5><MdOutlineAttachMoney />&nbsp;Pagamento</h5>
                   <h6>O pagamento é feito na entrega. Escolha a forma que deseja pagar.</h6>
+
+                  <FormPayment/>
                 </div>
               </div>
 

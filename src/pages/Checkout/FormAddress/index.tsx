@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { FormAddressContainer } from "./styles";
 
 
-export default function FormAddress() {
+export const FormAddress = () => {
   const {
     register,
     handleSubmit,
