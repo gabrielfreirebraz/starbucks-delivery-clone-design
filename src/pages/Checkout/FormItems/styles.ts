@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const FormItemsContainer = styled.div`
   height: 100%;
+
   .block {
     display: flex;
     flex-direction: column;
@@ -9,10 +10,28 @@ export const FormItemsContainer = styled.div`
     justify-content: space-between;
     height: 100%;
 
+    .checkout-value__items {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: start;
+      padding: 2rem 1rem;
+      gap: 0.5rem;
+      p,
+      h5 {
+        margin: 0 !important;
+        padding: 0;
+        color: ${(props) => props.theme.black};
+      }
+      h5 {
+        font-weight: 700 !important;
+      }
+    }
+
     button {
       width: 80%;
       margin: 2rem;
-      margin-top: 4rem;
+      margin-top: 0;
     }
   }
 `;

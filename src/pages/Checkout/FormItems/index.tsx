@@ -11,6 +11,13 @@ export const FormItems = () => {
 
   const { cartItems } = useContext(AppProvider);
 
+  const totalItems__Value = cartItems?.reduce((total, currItem) =>  total + currItem.price, 0) ?? 0;
+  const totalEntrega__Value = 10; // Em reais
+
+  const totalItems = convertToPrice(totalItems__Value);
+  const totalEntrega = convertToPrice(totalEntrega__Value);
+  const totalPedido = convertToPrice(totalItems__Value+totalEntrega__Value);
+
   return  (
     <FormItemsContainer>
 
@@ -31,6 +38,13 @@ export const FormItems = () => {
 
               </CheckoutItemContainer>);
             })}
+
+            <div className="checkout-value__items">
+              <p>Total itens: {totalItems}</p>
+              <p>Entrega: {totalEntrega}</p>
+              <h5>Total: {totalPedido}</h5>
+            </div>
+            
         </div>
 
         <ButtonContainer variant="primary" type="submit">
