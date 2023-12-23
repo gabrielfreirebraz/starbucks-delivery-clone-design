@@ -9,6 +9,7 @@ import { FormAddress } from "./FormAddress";
 import { FormPayment } from "./FormPayment";
 import { FormItems } from "./FormItems";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -19,6 +20,7 @@ import { useForm } from "react-hook-form";
 export const Checkout = () => {
 
   const { cartOn } = useContext(AppProvider);
+  const navigate = useNavigate();
 
   const hookForm = useForm();
 
@@ -41,7 +43,7 @@ export const Checkout = () => {
   const onSubmit = (data: any): void => { 
 
     console.log(data)
-    window.location.replace("/success")
+    navigate("/success", {replace: true});
   }
 
   return  (
