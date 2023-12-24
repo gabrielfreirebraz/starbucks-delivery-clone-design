@@ -6,8 +6,8 @@ export const FormPaymentContainer = styled.div`
     justify-content: space-around;
     padding: 3rem 2rem;
 
-    button {
-      width: 220px !important;
+    .btn {
+      width: 12rem !important;
     }
   }
 `;

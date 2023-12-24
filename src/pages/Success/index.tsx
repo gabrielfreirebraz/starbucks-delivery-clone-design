@@ -5,11 +5,13 @@ import { SuccessContainer } from "./styles";
 import { ImLocation2 } from "react-icons/im";
 import { MdAccessTimeFilled } from "react-icons/md";
 import { RiMoneyDollarCircleFill } from "react-icons/ri";
+import { useLocation } from "react-router-dom";
 
 
 export const Success = () => {
 
   const { cartOn } = useContext(AppProvider);
+ const { state } = useLocation();
 
   return (
     <SuccessContainer>
@@ -22,23 +24,23 @@ export const Success = () => {
         <ul className="block-2">
           <li>
             <h5>
-              <ImLocation2 />&nbsp;Entrega em 
+              <ImLocation2 />&nbsp;Entrega em&nbsp; 
               <br/>
-              <strong>R. Dr. Djalma Pinheiro Franco, SN - Vila Santa Catarina</strong>
+              <strong>{state?.rua}</strong>
             </h5>
           </li>
           <li>
             <h5>
-              <MdAccessTimeFilled />&nbsp;Previsão de entrega
+              <MdAccessTimeFilled />&nbsp;Previsão de entrega&nbsp;
               <br/>
               <strong>20 min - 30 min</strong>
             </h5>
           </li>
           <li>
             <h5>
-              <RiMoneyDollarCircleFill />&nbsp;Pagamento na entrega
+              <RiMoneyDollarCircleFill />&nbsp;Pagamento na entrega&nbsp;
               <br/>
-              <strong>Cartão de crédito</strong>
+              <strong>{state?.pagamento}</strong>
             </h5>
           </li>
         </ul>

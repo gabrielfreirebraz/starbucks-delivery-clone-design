@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Cart } from "../../components/Cart";
 import { AppProvider, CheckoutProvider } from "../../contexts/defaultContext";
 import { CheckoutContainer } from "./styles";
@@ -13,15 +13,10 @@ import { useNavigate } from "react-router-dom";
 
 
 
-
-
-
-
 export const Checkout = () => {
 
   const { cartOn, onClickRemoveCart } = useContext(AppProvider);
   const navigate = useNavigate();
-
   const hookForm = useForm();
 
   const providerHookForm = {
@@ -29,22 +24,13 @@ export const Checkout = () => {
     handleSubmit: hookForm.handleSubmit,
     watch: hookForm.watch,
     formState: hookForm.formState,
+    control: hookForm.control
   }
 
-  // type InputsAddress = {
-  //   cep: number,
-  //   rua: string,
-  //   numero: number,
-  //   complemento: string,
-  //   bairro: string,
-  //   cidade: string,
-  //   uf: string
-  // }
   const onSubmit = (data: any): void => { 
-
     console.log(data)
-    onClickRemoveCart(null);
-    navigate("/success", {replace: true});
+    onClickRemoveCart(null); // limpar carrinho de compras
+    navigate("/success", {replace: true, state: data});
   }
 
   return  (

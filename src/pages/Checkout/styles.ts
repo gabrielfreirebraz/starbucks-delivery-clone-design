@@ -22,7 +22,7 @@ export const CheckoutContainer = styled.div`
       }
       .block {
         background-color: ${(props) => props.theme.secondary};
-        border-radius: 4px;
+        border-radius: 0.5rem;
         height: 100%;
         width: 100%;
       }
@@ -35,7 +35,7 @@ export const CheckoutContainer = styled.div`
 
       .block {
         background-color: ${(props) => props.theme.secondary};
-        border-radius: 4px 35px;
+        border-radius: 0.5rem 2rem;
         height: fit-content;
         width: 100%;
       }

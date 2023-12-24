@@ -8,10 +8,12 @@ import { HeaderContainer } from './styles';
 import { ButtonContainer } from '../Button/styles';
 import { useContext } from 'react';
 import { AppProvider } from '../../contexts/defaultContext';
+import { useNavigate } from 'react-router-dom';
 
 export const Header = () => {
 
   const { setCartOn } = useContext(AppProvider);
+  const navigate = useNavigate();
 
   return (
     <HeaderContainer>
@@ -25,7 +27,7 @@ export const Header = () => {
 
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="/home">Menu</Nav.Link>
+              <Nav.Link href="#" onClick={() => navigate("/home")}>Menu</Nav.Link>
               <Nav.Link href="#">Rewards</Nav.Link>
               <Nav.Link href="#">Nosso café</Nav.Link>
               <Nav.Link href="#">Impacto social</Nav.Link>
