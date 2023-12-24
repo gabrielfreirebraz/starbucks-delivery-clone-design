@@ -15,10 +15,8 @@ export const FormPayment = () => {
     { name: 'Cartão de débito', value: 'Cartão de débito' },
     { name: 'Dinheiro', value: 'Dinheiro' },
   ];
-// console.log(radios.filter(radio => radio.value === radioValue)[0].name )
 
-const pay = watch("pagamento");
-console.log(pay)
+  const payTypeSelected = watch("pagamento","Cartão de crédito");
 
   return (
     <FormPaymentContainer>
@@ -30,9 +28,8 @@ console.log(pay)
 
             <Controller
               control={control}
-              name="pagamento"
-              // defaultValue={null}
-              key={idx}                            
+              name="pagamento"              
+              key={idx}  
               render={({
                 field
                 // field: { onChange, onBlur, value, name, ref },
@@ -49,15 +46,8 @@ console.log(pay)
                   {...field}
                   id={`radio-${idx}`}
                   type="radio"
-                  variant={'outline-success'}
+                  variant={`outline-success `+ (radio.value === payTypeSelected && 'active')}
                   value={radio.value}
-                  // checked
-                  // checked={fieldState.isTouched}
-                  // checked={radioValue === radio.value}
-                  // onChange={(e) => setRadioValue(e.currentTarget.value)}
-                  // onChange={field.onChange}
-                  // onClick={(e) => setRadioValue(e.currentTarget.value)}
-                  // onClick={(e) => console.log(fieldState.isTouched)}
                 >
                   {radio.name}
                 </ToggleButton>
@@ -65,9 +55,6 @@ console.log(pay)
             />
           ))}
         </ButtonGroup>
-        {/* <ButtonContainer variant="default" {...register("cartao-credito")}>Cartão de crédito</ButtonContainer>
-        <ButtonContainer variant="default" {...register("cartao-debito")}>Cartão de débito</ButtonContainer>
-        <ButtonContainer variant="default" {...register("dinheiro")}>Dinheiro</ButtonContainer> */}
       </div>
       
     </FormPaymentContainer>

@@ -20,11 +20,12 @@ export const Checkout = () => {
   const hookForm = useForm();
 
   const providerHookForm = {
-    register: hookForm.register,
-    handleSubmit: hookForm.handleSubmit,
-    watch: hookForm.watch,
-    formState: hookForm.formState,
-    control: hookForm.control
+    ...hookForm,
+    // register: hookForm.register,
+    // handleSubmit: hookForm.handleSubmit,
+    // watch: hookForm.watch,
+    // formState: hookForm.formState,
+    // control: hookForm.control
   }
 
   const onSubmit = (data: any): void => { 

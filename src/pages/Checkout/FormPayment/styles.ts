@@ -9,5 +9,12 @@ export const FormPaymentContainer = styled.div`
     .btn {
       width: 12rem !important;
     }
+    .btn:active,
+    .btn:focus,
+    .btn:hover {
+      color: #fff;
+      background-color: #198754;
+      /* z-index: 0 !important; */
+    }
   }
 `;
