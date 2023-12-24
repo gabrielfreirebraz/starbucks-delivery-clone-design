@@ -10,8 +10,11 @@ import { useLocation } from "react-router-dom";
 
 export const Success = () => {
 
-  const { cartOn } = useContext(AppProvider);
+ const { cartOn } = useContext(AppProvider);
  const { state } = useLocation();
+
+ !!state && localStorage.setItem('checkout__rua', state?.rua)
+ !!state && localStorage.setItem('checkout__pagamento', state?.pagamento)
 
   return (
     <SuccessContainer>
@@ -26,7 +29,7 @@ export const Success = () => {
             <h5>
               <ImLocation2 />&nbsp;Entrega em&nbsp; 
               <br/>
-              <strong>{state?.rua}</strong>
+              <strong>{localStorage.getItem('checkout__rua')}</strong>
             </h5>
           </li>
           <li>
@@ -40,7 +43,7 @@ export const Success = () => {
             <h5>
               <RiMoneyDollarCircleFill />&nbsp;Pagamento na entrega&nbsp;
               <br/>
-              <strong>{state?.pagamento}</strong>
+              <strong>{localStorage.getItem('checkout__pagamento')}</strong>
             </h5>
           </li>
         </ul>
