@@ -7,7 +7,7 @@ interface IAppContext {
   products: IProduct[];
   cartItems?: ICartItem[] | null;
   onClickAddCart: (...props) => void;
-  onClickRemoveCart: (id: string) => void;
+  onClickRemoveCart: (id: string | null) => void;
   cartOn: boolean;
   setCartOn: React.Dispatch<React.SetStateAction<boolean>>;
 }

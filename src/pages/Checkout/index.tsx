@@ -19,7 +19,7 @@ import { useNavigate } from "react-router-dom";
 
 export const Checkout = () => {
 
-  const { cartOn } = useContext(AppProvider);
+  const { cartOn, onClickRemoveCart } = useContext(AppProvider);
   const navigate = useNavigate();
 
   const hookForm = useForm();
@@ -43,6 +43,7 @@ export const Checkout = () => {
   const onSubmit = (data: any): void => { 
 
     console.log(data)
+    onClickRemoveCart(null);
     navigate("/success", {replace: true});
   }
 

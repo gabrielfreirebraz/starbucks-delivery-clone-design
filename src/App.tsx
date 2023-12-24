@@ -20,10 +20,13 @@ function App() {
     setCartOn(true);
     console.log([...cartItems, newProductItem]);
   }
-  const onClickRemoveCart = (id: string) => {
+  const onClickRemoveCart = (id: string | null) => {
 
-    console.log(id)
-    setCartItems((items) => items.filter((item) => item.itemId !== id));
+    if (id === null) {
+      setCartItems([]);
+    } else {
+      setCartItems((items) => items.filter((item) => item.itemId !== id));
+    }    
   }
 
   const providerProps: IAppContext = {
