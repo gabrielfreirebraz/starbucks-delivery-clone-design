@@ -19,7 +19,8 @@
     "react-icons": "^4.12.0",
     "react-router-dom": "^6.16.0",
     "styled-components": "^6.0.8",
-    "uuid": "^9.0.1"
+    "uuid": "^9.0.1",
+    "vercel": "^33.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

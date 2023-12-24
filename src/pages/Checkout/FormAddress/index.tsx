@@ -32,7 +32,7 @@ export const FormAddress = () => {
       <Row>
         <Col md={4}>
           <Form.Group className="mb-3" controlId="formBasicCep">
-            <Form.Control type="number" placeholder="CEP" {...register("cep", { required: true, onChange: (e) => handleCEP(e.target.value)  })} autoFocus />
+            <Form.Control type="number" placeholder="CEP" {...register("cep", { required: true, onChange: (e: any) => handleCEP(e.target.value)  })} autoFocus />
           </Form.Group>
         </Col>
         

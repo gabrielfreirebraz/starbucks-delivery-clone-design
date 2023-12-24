@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Cart } from "../../components/Cart";
 import { AppProvider, CheckoutProvider } from "../../contexts/defaultContext";
 import { CheckoutContainer } from "./styles";

@@ -2,9 +2,9 @@ const enum defaultPath {
   IMAGE = "./shop",
 }
 
-export const products: TProduct[] = [
+export const products: IProduct[] = [
   {
-    id: 1,
+    productId: 1,
     name: "Apple Crisp frappuccino",
     desc: "Bebida batida com gelo, com ou sem café, xarope de maça com açucar mascavo, finalizado com chantilly de baunilha e uma deliciosa calda de maça caramelizada com especiarias.",
     price: 21.0,
@@ -12,7 +12,7 @@ export const products: TProduct[] = [
     quantity: 1,
   },
   {
-    id: 2,
+    productId: 2,
     name: "Apple Crisp frappuccino",
     desc: "Bebida batida com gelo, com ou sem café, xarope de maça com açucar mascavo, finalizado com chantilly de baunilha e uma deliciosa calda de maça caramelizada com especiarias.",
     price: 18.0,
@@ -20,7 +20,7 @@ export const products: TProduct[] = [
     quantity: 1,
   },
   {
-    id: 3,
+    productId: 3,
     name: "Apple Crisp frappuccino",
     desc: "Bebida batida com gelo, com ou sem café, xarope de maça com açucar mascavo, finalizado com chantilly de baunilha e uma deliciosa calda de maça caramelizada com especiarias.",
     price: 21.0,
@@ -28,7 +28,7 @@ export const products: TProduct[] = [
     quantity: 1,
   },
   {
-    id: 4,
+    productId: 4,
     name: "Apple Crisp frappuccino 4",
     desc: "Bebida batida com gelo, com ou sem café, xarope de maça com açucar mascavo, finalizado com chantilly de baunilha e uma deliciosa calda de maça caramelizada com especiarias.",
     price: 20.5,
@@ -36,7 +36,7 @@ export const products: TProduct[] = [
     quantity: 1,
   },
   {
-    id: 5,
+    productId: 5,
     name: "Apple Crisp frappuccino",
     desc: "Bebida batida com gelo, com ou sem café, xarope de maça com açucar mascavo, finalizado com chantilly de baunilha e uma deliciosa calda de maça caramelizada com especiarias.",
     price: 16.0,
