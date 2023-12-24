@@ -21,13 +21,11 @@ export const SuccessContainer = styled.div`
   }
 
   .blocks {
-    /* border: solid 1px red; */
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
 
     .block-1 {
-      /* border: solid 1px ${(props) => props.theme.primary}; */
       border-radius: 1rem 5rem;
       background: url("./starbucks-atendente.jpg") no-repeat bottom left;
       background-position: cover;
@@ -35,32 +33,12 @@ export const SuccessContainer = styled.div`
       padding: 1rem 0 4rem 0;
       height: 22rem;
       width: 37rem;
-
-      /* ul li {
-      list-style: none;
-      background: white;
-      opacity: 0.5;
-
-      h5 {
-        font-weight: 250;
-        font-size: 1.2rem;
-        strong {
-          font-weight: 700;
-          margin: 0 1.5rem;
-          font-size: 1.2rem;
-        }
-      }
-    } */
     }
-
     .block-2 {
-      /* border: solid 1px #000; */
       padding-right: 5rem;
 
       li {
         list-style: none;
-        /* background: white;
-    opacity: 0.5; */
 
         h5 {
           font-weight: 250;

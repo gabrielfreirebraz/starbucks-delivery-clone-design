@@ -17,33 +17,7 @@ export const Success = () => {
       <h6>Agora é só aguardar que logo o café chegará até você</h6>
 
       <div className="blocks">
-        <div className="block-1">
-  {/* 
-          <ul>
-            <li>
-              <h5>
-                <ImLocation2 />&nbsp;Entrega em 
-                <br/>
-                <strong>Rua.. </strong>
-              </h5>
-            </li>
-            <li>
-              <h5>
-                <MdAccessTimeFilled />&nbsp;Previsão de entrega
-                <br/>
-                <strong>20 min - 30 min</strong>
-              </h5>
-            </li>
-            <li>
-              <h5>
-                <RiMoneyDollarCircleFill />&nbsp;Pagamento na entrega
-                <br/>
-                <strong>Cartão de crédito</strong>
-              </h5>
-            </li>
-          </ul> */}
-        </div>
-
+        <div className="block-1"></div> {/* background image  */}
 
         <ul className="block-2">
           <li>
