@@ -16,7 +16,7 @@ export const FormPayment = () => {
     { name: 'Dinheiro', value: 'Dinheiro' },
   ];
 
-  const payTypeSelected = watch("pagamento","Cartão de crédito");
+  const payTypeSelected = watch("pagamento");
 
   return (
     <FormPaymentContainer>

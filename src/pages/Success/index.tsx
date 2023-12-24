@@ -13,7 +13,7 @@ export const Success = () => {
  const { cartOn } = useContext(AppProvider);
  const { state } = useLocation();
 
- !!state && localStorage.setItem('checkout__rua', state?.rua)
+ !!state && localStorage.setItem('checkout__endereco', state?.rua + ', '+state?.numero + ' - '+ state?.bairro + ', '+ state?.cidade+'/'+state?.uf)
  !!state && localStorage.setItem('checkout__pagamento', state?.pagamento)
 
   return (
@@ -29,7 +29,7 @@ export const Success = () => {
             <h5>
               <ImLocation2 />&nbsp;Entrega em&nbsp; 
               <br/>
-              <strong>{localStorage.getItem('checkout__rua')}</strong>
+              <strong>{localStorage.getItem('checkout__endereco')}</strong>
             </h5>
           </li>
           <li>

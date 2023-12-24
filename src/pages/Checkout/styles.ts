@@ -21,7 +21,7 @@ export const CheckoutContainer = styled.div`
         height: fit-content;
       }
       .block {
-        background-color: ${(props) => props.theme.secondary};
+        background-color: ${(props) => props.theme.lightGray};
         border-radius: 0.5rem;
         height: 100%;
         width: 100%;
@@ -34,7 +34,7 @@ export const CheckoutContainer = styled.div`
       gap: 1rem;
 
       .block {
-        background-color: ${(props) => props.theme.secondary};
+        background-color: ${(props) => props.theme.lightGray};
         border-radius: 0.5rem 2rem;
         height: fit-content;
         width: 100%;

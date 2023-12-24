@@ -7,7 +7,7 @@ import axios from "axios";
 
 export const FormAddress = () => {
  
-  const { register, formState: { errors } } = useContext(CheckoutProvider);
+  const { register, formState: { errors }, setValue } = useContext(CheckoutProvider);
   const [rua, setRua] = useState(null);
   const [bairro, setBairro] = useState(null);
   const [complemento, setComplemento] = useState(null);
@@ -32,13 +32,13 @@ export const FormAddress = () => {
       <Row>
         <Col md={4}>
           <Form.Group className="mb-3" controlId="formBasicCep">
-            <Form.Control type="number" placeholder="CEP" {...register("cep", { required: true, onChange: (e) => handleCEP(e.target.value)  })} />
+            <Form.Control type="number" placeholder="CEP" {...register("cep", { required: true, onChange: (e) => handleCEP(e.target.value)  })} autoFocus />
           </Form.Group>
         </Col>
         
         <Col md={8}>
           <Form.Group className="mb-3" controlId="formBasicRua">
-            <Form.Control type="text" placeholder="Rua" {...register("rua", { required: false })} value={rua} />
+            <Form.Control type="text" placeholder="Rua" {...register("rua", { required: true, onChange: setValue("rua",rua) })} value={rua} />
           </Form.Group>
         </Col>
       </Row>
@@ -46,13 +46,13 @@ export const FormAddress = () => {
       <Row>
         <Col md={4}>
           <Form.Group className="mb-3" controlId="formBasicNumero">
-            <Form.Control type="text" placeholder="Número" {...register("numero", { required: false })}  />
+            <Form.Control type="text" placeholder="Número" {...register("numero", { required: true, })}  />
           </Form.Group>
         </Col>
         
         <Col md={8}>
           <Form.Group className="mb-3" controlId="formBasicComplemento">
-            <Form.Control type="text" placeholder="Complemento (Opcional)" {...register("complemento")} value={complemento}  />
+            <Form.Control type="text" placeholder="Complemento (Opcional)" {...register("complemento", { onChange: setValue("complemento",complemento) })} value={complemento} />
           </Form.Group>
         </Col>
       </Row>
@@ -60,19 +60,19 @@ export const FormAddress = () => {
       <Row>
         <Col md={4}>
           <Form.Group className="mb-3" controlId="formBasicBairro">
-            <Form.Control type="text" placeholder="Bairro" {...register("bairro", { required: false })} value={bairro}  />
+            <Form.Control type="text" placeholder="Bairro" {...register("bairro", { required: true, onChange: setValue("bairro",bairro) })} value={bairro} />
           </Form.Group>
         </Col>
 
         <Col md={6}>
           <Form.Group className="mb-3" controlId="formBasicCidade">
-            <Form.Control type="text" placeholder="Cidade" {...register("cidade", { required: false })} value={cidade}  />
+            <Form.Control type="text" placeholder="Cidade" {...register("cidade", { required: true, onChange: setValue("cidade",cidade) })} value={cidade} />
           </Form.Group>
         </Col>
 
         <Col md={2}>
           <Form.Group className="mb-3" controlId="formBasicUF">
-            <Form.Control type="text" placeholder="UF" {...register("uf", { required: false })} value={uf}  />
+            <Form.Control type="text" placeholder="UF" {...register("uf", { required: true, onChange: setValue("uf",uf) })} value={uf} />
           </Form.Group>
         </Col>
 
