@@ -17,7 +17,7 @@ export const FormAddress = () => {
   const handleCEP = async (cep: number) => {
 
     if (cep.toString().length >= 8) {
-      const dataAddress = await axios.get(`http://viacep.com.br/ws/${cep}/json/`);
+      const dataAddress = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
 
       setBairro( dataAddress?.data.bairro ?? null );
       setComplemento( dataAddress?.data.complemento ?? null );
