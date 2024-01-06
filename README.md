@@ -1,4 +1,4 @@
-# Starburcks coffee virtual shop
+# Starbucks coffee virtual shop
 
 Virtual shop developed using React + TypeScript + Vite
 
